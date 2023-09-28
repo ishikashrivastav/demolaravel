@@ -13,6 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <a href="{{ route('students.index') }}" class="btn btn-success"> Students</a>
 
                     {{ __('You are logged in!') }}
                 </div>
