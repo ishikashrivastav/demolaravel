@@ -5,6 +5,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\ExportController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,7 @@ Route::middleware(['admin'])->group(function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Hard delete student
 Route::delete('/students/hard-delete/{id}', [StudentController::class, 'hardDelete'])->name('students.hard-delete');
 
